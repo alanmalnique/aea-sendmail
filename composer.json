@@ -1,0 +1,20 @@
+{
+    "name": "aeatech/sendmail",
+    "description": "Package to send mail global",
+    "type": "project",
+    "require": {
+        "phpmailer/phpmailer": "^6.8"
+    },
+    "license": "proprietary",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Alan Malnique Justino"
+        }
+    ],
+    "minimum-stability": "stable"
+}

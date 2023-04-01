@@ -1,0 +1,62 @@
+<html>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Nunito Sans', sans-serif;
+        }
+        p {
+            margin: 0;
+        }
+    </style>
+    <body style="margin: 0; padding: 0; border: 0;">
+        <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#eeeeee">
+            <tr>
+                <td valign="top">
+
+                    <!-- Header -->
+                    <table width="600" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" align="center">
+                        <tr>
+                            <td align="center" style="padding: 50px 0; border-bottom: 5px solid purple;">
+                                <img src="https://sendmail.aeait.com/templates/assets/logo-aeait.png" width="120" />
+                            </td>
+                        </tr>
+                    </table>
+                    <!-- End Header -->
+
+                    <!-- Content -->
+                    <table width="600" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" align="center">
+                        <tr>
+                            <td align="center" style="padding: 50px 0;">
+                                <p style="font-size: 25px; color: #666666; padding-bottom: 20px;">Hello, <b style="color: purple;">A&A IT</b>!</p>
+                                <p style="font-size: 16px; color: #666666;">You received a new contact email. Follow bellow the informations:</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" style="padding-bottom: 50px;">
+                                <p style="font-size: 16px; color: #666666; padding-bottom: 10px;">
+                                    <b style="color: purple;">Interests:</b> {$interests}
+                                </p>
+                                <p style="font-size: 16px; color: #666666; padding-bottom: 10px;">
+                                    <b style="color: purple;">Full Name:</b> {$name}
+                                </p>
+                                <p style="font-size: 16px; color: #666666; padding-bottom: 10px;">
+                                    <b style="color: purple;">Cellphone:</b> {$cellphone}
+                                </p>
+                                <p style="font-size: 16px; color: #666666; padding-bottom: 10px;">
+                                    <b style="color: purple;">Subject:</b> {$subject}
+                                </p>
+                                <p style="font-size: 16px; color: #666666;">
+                                    <b style="color: purple;">Message:</b> {$message}
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                    <!-- End Content-->
+
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
