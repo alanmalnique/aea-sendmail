@@ -16,12 +16,20 @@ abstract class Validate
         $this->fields = $fields;
     }
 
-    public function validateRequired(): void
+    /**
+     * @throws ValidateRequiredException
+     */
+    public function validateRequired(array $fields = []): void
     {
-        foreach ($this->requiredFields as $requiredField) {
-            $inArray = preg_match('/"'.preg_quote($requiredField, '/').'"/i' , json_encode($this->fields));
-            if (!$inArray) {
-                throw new ValidateRequiredException("Field `$requiredField` has empty value or does not exists.");
+        $fields = $fields ?: $this->requiredFields;
+        foreach ($fields as $requiredField) {
+            if (is_array($requiredField)) {
+                $this->validateRequired($requiredField);
+            } else {
+                $inArray = preg_match('/"'.preg_quote($requiredField, '/').'"/i' , json_encode($this->fields));
+                if (!$inArray) {
+                    throw new ValidateRequiredException("Field `$requiredField` has empty value or does not exists.");
+                }
             }
         }
     }

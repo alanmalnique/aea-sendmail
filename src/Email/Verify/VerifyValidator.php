@@ -2,22 +2,20 @@
 
 declare(strict_types=1);
 
-namespace App\Email\Contact;
+namespace App\Email\Verify;
 
+use App\Validator\Exception\ValidateRequiredException;
 use App\Validator\Validate;
 
-final class Validator extends Validate
+final class VerifyValidator extends Validate
 {
     public array $requiredFields = [
-        'subject',
-        'data' => [
-            'interests',
-            'name',
-            'cellphone',
-            'subject'
-        ]
+        'subject'
     ];
 
+    /**
+     * @throws ValidateRequiredException
+     */
     public function __construct(array $fields)
     {
         parent::__construct($fields);
